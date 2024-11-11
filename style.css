@@ -1,0 +1,134 @@
+@font-face {
+    font-family:'PixelifySans-Regular';
+    src: url('font/PixelifySans-Regular.ttf');
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: 'PixelifySans-Regular', sans-serif;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    /* Light background for better visibility */
+}
+
+.field {
+    font-family: 'PixelifySans-Regular', sans-serif;
+    overflow: hidden;
+    position: relative;
+    width: 1500px;
+    height: 200px;
+    /* Base height for desktop */
+    margin: 0 3rem;
+    /* Margin for desktop spacing */
+}
+
+.score {
+    font-family: 'PixelifySans-Regular', sans-serif;
+    position: absolute;
+    font-size: 3vmin;
+    /* Responsive font size */
+    right: 2vmin;
+    top: 2vmin;
+}
+
+.score.highest {
+    font-family: 'PixelifySans-Regular', sans-serif;
+    right: auto;
+    left: 300px;
+}
+
+.start-screen {
+    font-family: 'PixelifySans-Regular', sans-serif;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    font-size: 20px;
+    /* Responsive font size */
+    transform: translate(-50%, -50%);
+}
+
+.hide {
+    font-family: 'PixelifySans-Regular', sans-serif;
+    display: none;
+}
+
+.ground {
+    font-family: 'PixelifySans-Regular', sans-serif;
+    --left: 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: calc(var(--left) * 1%);
+}
+
+.player {
+    font-family: 'PixelifySans-Regular', sans-serif;
+    --bottom: 0;
+    position: absolute;
+    left: 2%;
+    height: 30%;
+    bottom: calc(var(--bottom) * 1%);
+}
+
+.cactus {
+    font-family: 'PixelifySans-Regular', sans-serif;
+    position: absolute;
+    --left: 0;
+    bottom: 0;
+    height: 30%;
+    left: calc(var(--left) * 1%);
+}
+
+@media only screen and (max-width: 500px) {
+    .field {
+        font-family: 'PixelifySans-Regular', sans-serif;
+        margin: 0;
+        height: 110px;
+        /* Reduced height for mobile */
+    }
+
+    .score {
+        font-size: 5vw;
+        /* Larger score font for mobile */
+    }
+
+    .start-screen {
+        font-family: 'PixelifySans-Regular', sans-serif;
+        font-size: 5vw;
+        /* Larger start screen text for mobile */
+    }
+
+    #restartButton {
+        padding: 2vw 4vw;
+        /* Responsive padding for mobile */
+        font-size: 5vw;
+        /* Responsive font size for mobile */
+    }
+}
+
+#restartButton {
+    font-family: 'PixelifySans-Regular', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 20px;
+    /* Default font size */
+    cursor: pointer;
+    display: none;
+    /* Initially hidden */
+}
+
+ /* #dino {
+    width: 100px;   
+    height: auto;   
+    position: absolute; 
+    bottom: 0;    }  
